@@ -7,7 +7,5 @@ auto main() -> int {
     while (t--) {
         auto n = int{};
         std::cin >> n;
-
-        
     }
 }
