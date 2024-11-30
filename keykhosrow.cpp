@@ -5,7 +5,8 @@ auto main() -> int {
   std::cin.tie(0);
 
   auto n = int{}; // number of test cases
-  auto a = int{}; auto b = int{}; // two sacred numbers
+  auto a = int{};
+  auto b = int{}; // two sacred numbers
   auto m = int{}; // m >= max(a, b) (Least Common Multiple)
                   // m mod a = m mod b (Greatest Common Divisor)
   std::cin >> n;
