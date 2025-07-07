@@ -3,25 +3,24 @@
 auto main() -> int {
   int n; int m;
   std::cin >> n;
-  std::vector<int> vectors;
-  while (std::cin >> m) {
-    vectors.push_back(m);
+
+  std::vector<std::array<int, 3>> vectors(n);
+
+  for (int i = 0; i < n; ++i) {
+    std::cin >> vectors[i][0] >> vectors[i][1] >> vectors[i][2];
   }
 
-  int x = 0; int y = 1; int z = 2;
-  int xcnt = 0; int ycnt = 0; int zcnt = 0;
+  int xcnt = 0, ycnt = 0, zcnt = 0;
 
-  for (auto i = 0; i < n; ++i) {
-    xcnt += vectors[x];
-    ycnt += vectors[y];
-    zcnt += vectors[z];
-
-    x += 3; y += 3; z += 3;
+  for (const auto& vec : vectors) {
+    xcnt += vec[0];
+    ycnt += vec[1];
+    zcnt += vec[2];
   }
 
   if (xcnt == 0 && ycnt == 0 && zcnt == 0) {
-    std::cout << "YES" << "\n";
+    std::cout << "YES\n";
   } else {
-    std::cout << "NO" << "\n";
+    std::cout << "NO\n";
   }
 }
