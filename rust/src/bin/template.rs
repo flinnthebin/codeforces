@@ -29,6 +29,7 @@ macro_rules! dbg {
     ($($x:expr), * $(,)?) => { eprintln!($(concat!(stringify!($x), "={:?} "), $x),*); };
 }
 
+//if new_value < current_value { current_value = new_value; }
 #[allow(unused_macros)]
 macro_rules! chmin {
     ($a:expr, $b:expr) => {{
@@ -42,6 +43,7 @@ macro_rules! chmin {
     }};
 }
 
+//if new_value > current_value { current_value = new_value; }
 #[allow(unused_macros)]
 macro_rules! chmax {
     ($a:expr, $b: expr) => {{
