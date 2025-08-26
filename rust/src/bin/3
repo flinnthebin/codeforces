@@ -1,0 +1,57 @@
+use std::io::{self, Read};
+
+struct Scanner<'a> {
+    it: std::str::SplitAsciiWhitespace<'a>,
+}
+
+impl<'a> Scanner<'a> {
+    fn new(s: &'a str) -> Self {
+        Self {
+            it: s.split_ascii_whitespace(),
+        }
+    }
+
+    fn next<T: std::str::FromStr>(&mut self) -> T {
+        self.it.next().unwrap().parse().ok().unwrap()
+    }
+}
+
+macro_rules! yesno {
+    ($cond:expr) => {
+        if $cond { "YES" } else { "NO" }
+    };
+}
+
+fn num_cells(n: usize, sc: &mut Scanner) {
+    for _ in 0..n {
+        let n: usize = sc.next();
+        let a: usize = sc.next();
+        let b: usize = sc.next();
+
+
+    (1..=(n-a+1)).filter(|&x| x = n + 1 - x);
+    (1..=(n-b+1)).filter(|&y| ;
+
+
+    yesno!()
+}
+
+fn main() {
+    let mut buf = String::new();
+    io::stdin().read_to_string(&mut buf).unwrap();
+    let mut sc = Scanner::new(&buf);
+    let n: usize = sc.next();
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn example() {
+        let mut data = "7 5 3 1 4 1 2 7 7 4 8 3 7 1 1 1 1000000000 1000000000 1000000000 3 2 1".to_string();
+        let mut sc = Scanner::new(&data);
+        let n: usize = sc.next();
+        assert_eq!(num_cells(n, &mut sc), "YES YES NO NO YES YES NO".to_string());
+
+    }
+}
