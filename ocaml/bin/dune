@@ -1,0 +1,3 @@
+(executables
+ (names p2264A p2264B)
+ (libraries solutions))
